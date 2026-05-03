@@ -1,0 +1,23 @@
+version: 0.1
+
+tools:
+  definitions:
+    - name: add-trailing-comma
+      runtime: python
+      package: add-trailing-comma
+      shims: [add-trailing-comma]
+      known_good_version: 4.0.0
+
+lint:
+  definitions:
+    - name: add-trailing-comma
+      description: Enforce trailing commas in Python code for consistent formatting
+      files: [python]
+      commands:
+        - name: format
+          output: rewrite
+          run: add-trailing-comma ${target}
+          success_codes: [0, 1]
+          batch: true
+          in_place: true
+          cache_results: true
