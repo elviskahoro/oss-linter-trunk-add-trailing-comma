@@ -4,19 +4,21 @@ A Trunk plugin for [add-trailing-comma](https://github.com/asottile/add-trailing
 
 ## Installation
 
-Enable the linter in your `.trunk/trunk.yaml`:
+Add this repo as a plugin source and enable the linter in your `.trunk/trunk.yaml`:
 
 ```yaml
+plugins:
+  sources:
+    - id: add-trailing-comma
+      ref: v0.1.0
+      uri: https://github.com/elviskahoro/trunk-linter-add-trailing-linter
+
 lint:
   enabled:
     - add-trailing-comma
 ```
 
-Or use the CLI:
-
-```bash
-trunk check enable add-trailing-comma
-```
+Then run `trunk check` — Trunk will fetch the plugin and install `add-trailing-comma` into its managed Python runtime on first invocation.
 
 ## About
 
@@ -143,7 +145,7 @@ trunk check add-trailing-comma --force
 
 ## Contributing
 
-Issues and contributions are welcome! Please file issues at the [Trunk plugins repository](https://github.com/trunk-io/plugins).
+Issues and contributions are welcome! File issues at this repository's [issues page](https://github.com/elviskahoro/trunk-linter-add-trailing-linter/issues).
 
 ## License
 

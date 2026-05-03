@@ -1,0 +1,21 @@
+# Basic test file with lists and dicts that need trailing commas
+test_list = [
+    'a',
+    'b',
+    'c',
+]
+
+test_dict = {
+    'x': 1,
+    'y': 2,
+}
+
+test_tuple = (
+    'item1',
+    'item2',
+)
+
+function_call(
+    arg1,
+    arg2,
+)

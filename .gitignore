@@ -40,6 +40,5 @@ npm-debug.log
 yarn-error.log
 
 # Test artifacts
-*.shot
 test_reports/
 coverage/

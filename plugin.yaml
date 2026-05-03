@@ -11,8 +11,11 @@ tools:
 lint:
   definitions:
     - name: add-trailing-comma
-      description: Enforce trailing commas in Python code for consistent formatting
       files: [python]
+      description: Adds trailing commas to Python multi-line collections and call sites
+      tools: [add-trailing-comma]
+      suggest_if: files_present
+      known_good_version: 4.0.0
       commands:
         - name: format
           output: rewrite
@@ -20,4 +23,5 @@ lint:
           success_codes: [0, 1]
           batch: true
           in_place: true
+          formatter: true
           cache_results: true
